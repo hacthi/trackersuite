@@ -1,0 +1,70 @@
+<svg width="220" height="66" viewBox="0 0 220 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle with Gradient -->
+  <defs>
+    <linearGradient id="primaryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#8B5CF6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1E40AF;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06B6D4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0891B2;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Main Logo Circle -->
+  <circle cx="30" cy="30" r="25" fill="url(#primaryGradient)" filter="url(#glow)"/>
+  
+  <!-- Central Network Hub -->
+  <circle cx="30" cy="30" r="4" fill="white"/>
+  
+  <!-- Connection Lines (representing relationships) -->
+  <line x1="30" y1="30" x2="20" y2="15" stroke="white" stroke-width="2" opacity="0.9"/>
+  <line x1="30" y1="30" x2="40" y2="15" stroke="white" stroke-width="2" opacity="0.9"/>
+  <line x1="30" y1="30" x2="45" y2="30" stroke="white" stroke-width="2" opacity="0.9"/>
+  <line x1="30" y1="30" x2="40" y2="45" stroke="white" stroke-width="2" opacity="0.9"/>
+  <line x1="30" y1="30" x2="20" y2="45" stroke="white" stroke-width="2" opacity="0.9"/>
+  <line x1="30" y1="30" x2="15" y2="30" stroke="white" stroke-width="2" opacity="0.9"/>
+  
+  <!-- Client Nodes (smaller circles representing clients) -->
+  <circle cx="20" cy="15" r="3" fill="white"/>
+  <circle cx="40" cy="15" r="3" fill="white"/>
+  <circle cx="45" cy="30" r="3" fill="white"/>
+  <circle cx="40" cy="45" r="3" fill="white"/>
+  <circle cx="20" cy="45" r="3" fill="white"/>
+  <circle cx="15" cy="30" r="3" fill="white"/>
+  
+  <!-- Activity Indicators (small dots showing engagement) -->
+  <circle cx="22" cy="17" r="1.5" fill="url(#accentGradient)">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="38" cy="17" r="1.5" fill="url(#accentGradient)">
+    <animate attributeName="opacity" values="1;0.3;1" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="43" cy="32" r="1.5" fill="url(#accentGradient)">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="1.8s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Company Name -->
+  <text x="70" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="url(#primaryGradient)">
+    Tracker Suite
+  </text>
+  
+  <!-- Tagline -->
+  <text x="70" y="38" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="400" fill="#64748B">
+    Client Relationship Excellence
+  </text>
+  
+  <!-- Subtle tracking indicator -->
+  <rect x="70" y="52" width="140" height="2" fill="#E2E8F0" rx="1"/>
+  <rect x="70" y="52" width="45" height="2" fill="url(#accentGradient)" rx="1">
+    <animate attributeName="width" values="0;100;0" dur="3s" repeatCount="indefinite"/>
+  </rect>
+</svg>
